@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet"> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+</head
+>
+<body>
+	<article class="jumbotron tictactoe noselect">
+		<div class="container-fluid tictactoe-font">
+			<div class="center-align">
+				<h1>Let's play TicTacToe!</h1>
+			</div>
+
+			<!-- Game Mode -->
+			<div class="row">
+				<div class="col-md-offset-3 col-md-3 left-align tictactoe-btn" id="computer">
+					<h2>Vs Computer</h2>
+				</div>
+				<div class="col-md-3 right-align tictactoe-btn" id="player">
+					<h2>Vs Player</h2>
+				</div>
+			</div>
+
+			<!-- Player Type -->
+			<div class="row">
+				<div class="col-md-offset-3 col-md-3 center-align tictactoe-btn" id="X">
+					<h2>X</h2>
+				</div>
+				<div class="col-md-3 center-align tictactoe-btn" id="O">
+					<h2>O</h2>
+				</div>
+			</div>
+			<br>
+
+			<div class="tictactoe-font">
+				<div class="row">
+					<div class="col-md-offset-4 col-md-1 tictactoe-box center-align hidden" data-val="0"></div>
+					<div class="col-md-1 tictactoe-box center-align hidden" data-val="1"></div>
+					<div class="col-md-1 tictactoe-box center-align hidden" data-val="2"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-offset-4 col-md-1 tictactoe-box center-align hidden" data-val="3"></div>
+					<div class="col-md-1 tictactoe-box center-align hidden" data-val="4"></div>
+					<div class="col-md-1 tictactoe-box center-align hidden" data-val="5"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-offset-4 col-md-1 tictactoe-box center-align hidden" data-val="6"></div>
+					<div class="col-md-1 tictactoe-box center-align hidden" data-val="7"></div>
+					<div class="col-md-1 tictactoe-box center-align hidden" data-val="8"></div>
+				</div>
+				<br>
+				<button type="button" class="btn btn-lg btn-success" id="reset">Reset</button>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

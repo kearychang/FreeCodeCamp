@@ -1,0 +1,72 @@
+body {
+	background-color: #DFDBE5;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.simon-game-border {
+	margin: auto;
+	margin-top: 5%;
+	height: 80%;
+	width: 80%;
+	padding-top: 1% !important;
+	padding-bottom: 1% !important;
+}
+
+.simon-game-font {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 4em;
+	text-align: center;
+}
+
+.simon-game-btn {
+	min-height: 300px;
+	cursor: pointer;
+	border-radius: 25px;
+}
+.simon-game-btn-pressed {
+	min-height: 275px !important;
+	border-bottom: 0px solid transparent !important;
+	margin-top: 12px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#red {
+	background-color: #AA2121;
+	border-bottom: 10px solid #770F0F;
+}
+#red:hover {
+	background-color: #FF0000 !important;
+}
+
+#green {
+	background-color: #21AA21;
+	border-bottom: 10px solid #0F770F;
+}
+#green:hover {
+	background-color: #00FF00 !important;
+}
+
+#blue {
+	background-color: #2121AA;
+	border-bottom: 10px solid #0F0F77;
+}
+#blue:hover {
+	background-color: #0000FF !important;
+}
+
+#yellow {
+	background-color: #AAAA21;
+	border-bottom: 10px solid #77770F;
+}
+#yellow:hover {
+	background-color: #FFFF00 !important;
+}

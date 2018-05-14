@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"> 
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<article class="jumbotron simon-game-border noselect">
+		<h1 class="simon-game-font">
+			Simon Game
+		</h1>
+		<hr>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="offset-2 col-2 simon-game-btn" id="red" data-val="1"></div>
+				<div class="col-2 simon-game-btn" id="green" data-val="2"></div>
+				<div class="col-2 simon-game-btn" id="blue" data-val="3"></div>
+				<div class="col-2 simon-game-btn" id="yellow" data-val="4"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="offset-2 col-3">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-primary" id="start">
+							Start/Replay
+						</button>
+						<button type="button" class="btn btn-warning" id="restart">
+							Reset
+						</button>
+					</div>
+				</div>
+
+				<div class="offset-3 col-2">
+					<button type="button" class="btn btn-outline-danger" id="strict">
+						Strict - OFF
+					</button>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="offset-2 col-3">
+					<div class="alert alert-info" role="alert" id="count">--</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+
+</html>

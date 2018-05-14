@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Keary's Portfolio Page</title>
+
+  <!-- STYLESHEET -->
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!-- NAV BAR -->
+    <nav class="row">
+      <nav class="btn-group col-lg-12 main-sidebar">
+        <button class="main-btn btn btn-default col-xs-1" id="home-btn">Home</button>
+        <button class="main-btn btn btn-default col-xs-1" id="portfolio-btn">Portfolio</button>
+        <button class="main-btn btn btn-default col-xs-1" id="contact-btn">Contact</button>
+        <button class="main-btn btn btn-default col-xs-1" id="about-btn">About</button>
+      </nav>
+    </nav>
+
+    <!-- HOME -->
+    <article class="row" id="home">
+      <!-- HOME TITLE -->
+      <div class="main col-lg-6">
+        <div>
+          <h1 class="home-font" style="font-size: 5em">Keary Chang</h1>
+          <h4 class="home-font" style="font-size: 2em">Aspiring Software Developer</h4>
+        </div>
+      </div>
+
+      <!-- HOME PICTURE -->
+      <img class="img-responsive col-lg-4" src="http://orig06.deviantart.net/0796/f/2013/089/6/5/mask_avatar_for_use_by_yellow_submarine7-d5zucgu.png"> </img>
+    </article>
+
+      <!-- HOME QUOTE -->
+      <div class="home-font text-center" style="font-size: 2.5em">"First solve the problem. Then write the code."</div>
+      <div class="home-font text-center" style="font-size: 1.5em">-John Johnson</div>
+
+    <!-- PORTFOLIO -->
+    <article class="portfolio" id="portfolio">
+      <h1 class="portfolio-font text-center">Portfolio</h1>
+      <hr>
+
+      <!-- PORTFOLIO ROW 1 -->
+      <div class="row">
+        <img class="col-lg-5 offset-lg-1 img-responsive portfolio-border" src="http://static.tumblr.com/f711e3363d6fc5d96ce4c8d94e414679/yqgkgus/GP2mnaum4/tumblr_static_tron-grid.jpg"></img>
+        <img class="col-lg-5 img-responsive portfolio-border" src="http://static.tumblr.com/f711e3363d6fc5d96ce4c8d94e414679/yqgkgus/GP2mnaum4/tumblr_static_tron-grid.jpg"></img>
+      </div>
+      <br><br>
+
+      <!-- PORTFOLIO ROW 2 -->
+      <div class="row">
+        <img class="col-lg-5 offset-lg-1 img-responsive portfolio-border" src="http://static.tumblr.com/f711e3363d6fc5d96ce4c8d94e414679/yqgkgus/GP2mnaum4/tumblr_static_tron-grid.jpg"></img>
+        <img class="col-lg-5 img-responsive portfolio-border" src="http://static.tumblr.com/f711e3363d6fc5d96ce4c8d94e414679/yqgkgus/GP2mnaum4/tumblr_static_tron-grid.jpg"></img>
+      </div>
+    </article>
+
+    <!-- CONTACT -->
+    <article class="contact" id="contact">
+      <h1 class="contact-font text-center">Contact</h1>
+      <hr><br><br>
+      
+      <!-- CONTACT MSG -->
+      <div class="row">
+        <!-- CONTACT BOX -->
+        <div class="col-lg-4 offset-lg-1">
+          <input class="form-control form-control-lg" placeholder="Name" type="text">
+          <br>
+          <input class="form-control form-control-lg" placeholder="Email" type="text">
+          <br>
+          <input class="form-control form-control-lg" placeholder="Phone Number" type="text">
+          <br>
+          <div class="form-group">
+            <textarea class="form-control form-control-lg" rows="5" placeholder="Message"></textarea>
+          </div>
+          <button type="button" class="btn btn-success">Send</button>
+        </div>
+  
+        <!-- CONTACT MSG -->
+        <div class="col-lg-4 offset-lg-1 contact-font">
+          <h3>Want to contact me?</h3>
+          <h3><br></h3>
+          <h3>Perhaps you want to know more about my projects or you want to collaborate. I'm always eager to hear from new people.</h3>
+          <h3><br></h3>
+          <h3>Leave your message and contact information. I promise to get back to you quickly.</h3>
+        </div>
+      </div>
+      <hr><br><br>
+
+      <!-- CONTACT SOCIAL MEDIA -->
+      <div class="contact-social">
+        <div class="row">
+          <div class="col-lg-3 contact-social-img">
+            <a href="https://facebook.com">
+            <img src="https://image.flaticon.com/icons/svg/145/145802.svg" class="img-fluid"></img>
+            </a>
+          </div>
+          <div class="col-lg-3 contact-social-img">
+            <a href="https://twitter.com">
+            <img src="https://image.flaticon.com/icons/svg/145/145812.svg" class="img-fluid"></img>
+            </a>
+          </div>
+          <div class="col-lg-3 contact-social-img">
+            <a href="https://github.com">
+            <img src="https://image.flaticon.com/icons/svg/179/179323.svg" class="img-fluid"></img>
+            </a>
+          </div> 
+          <div class="col-lg-3 contact-social-img">
+            <a href="https://linkedin.com">
+            <img src="https://image.flaticon.com/icons/svg/145/145807.svg" class="img-fluid"></img>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+  </div>
+</body>
+</html>

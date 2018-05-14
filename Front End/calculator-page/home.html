@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+
+	<!-- HEADER STYLESHEET -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg">
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet"> 
+
+	<!-- HEADER SCRIPT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+		<!-- Display Screen -->
+		<div class="calc-display calc-display-font">
+			0
+		</div>
+		<div class="calc-list calc-list-font">
+			&nbsp;
+		</div>
+
+		<!-- Buttons -->
+		<br>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 calc-button calc-button-font"></div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="9">9</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="8">8</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="7">7</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="6">6</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="5">5</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-op" data-val="sub">-</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-op" data-val="div">/</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-op"></div>
+				<div class="col-md-1 calc-button calc-button-font" id="calc-ac">AC</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-1 calc-button calc-button-font" id="calc-dec">.</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="0">0</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="1">1</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="2">2</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="3">3</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-number" data-val="4">4</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-op" data-val="add">+</div>
+				<div class="col-md-1 calc-button calc-button-font calc-button-op" data-val="mul">*</div>
+				<div class="col-md-1 calc-button calc-button-font" id="calc-eq">=</div>
+				<div class="col-md-1 calc-button calc-button-font" id="calc-ce">CE</div>
+			</div>
+		</div>
+</body>
+
+</html>

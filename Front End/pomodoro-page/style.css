@@ -1,0 +1,64 @@
+body {
+	background-color: #7ea8c9;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.pomodoro-title {
+	font-family: 'Barrio', cursive;
+	font-size: 8em;
+	color: #11D12C;
+	margin-top: 5%;
+}
+
+.pomodoro-stop {
+	background: #FF6666 !important;
+}
+
+.pomodoro-img { 
+ 	display: table-cell;
+   	width: 500px; 
+ 	height: 500px; 
+ 	background: linear-gradient(to top, lightgreen -2px, red 0px); 
+ 	border-radius: 500px; 
+ 	border-color: #005719;
+ 	border-width: 2px;
+ 	border-style: solid;
+ 	-moz-border-radius: 500px; 
+ 	-webkit-border-radius: 500px; 
+ 	text-align: center;
+	vertical-align: middle;	
+	cursor: pointer;
+}
+
+.pomodoro-font {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 8em;
+}
+
+.pomodoro-font2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 8em;
+	color: white;
+}
+
+.pomodoro-active {
+	color: #0FC0E0 !important;
+}
+
+.pomodoro-btn {
+	cursor: pointer;
+}
+
+.pomodoro-btn:hover {
+	color: #259F36;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

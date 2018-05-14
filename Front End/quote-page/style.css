@@ -1,0 +1,39 @@
+.quote-body {
+	background-color: white;
+	border-radius: 5px;
+	margin-left: 20%;
+	padding: 25px 50px 25px 50px;
+	width: 60%;
+}
+
+.quote-text {
+	font-family: 'Raleway';
+	font-size: 4.5em;
+}
+
+.quote-author {
+	font-family: 'Raleway';
+	font-size: 1.5em;
+}
+
+.quote-btn {
+	font-color: white;
+	border:none !important;
+	margin: 0 auto;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid {
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+html,body {
+  height: 100%;
+}

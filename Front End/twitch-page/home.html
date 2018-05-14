@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Twitch Channel Status</title>
+	
+	<!-- HEADER STYLESHEET -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"> 
+
+	<!-- HEADER SCRIPT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<article>
+		<div class="jumbotron">
+			<!-- Title/Logo -->
+			<div class="row">
+				<div class="col-lg-2">
+				<img src="https://cdn0.iconfinder.com/data/icons/social-media-2092/100/social-57-128.png"></img>
+				</div>
+				<div class="col-lg-10">
+					<h1 class="twitch-font">Twitch Channel Status</h1>
+					<p>Add your favourite Twitch Channels and check their status.</p>
+				</div>
+			</div>
+			<br>
+
+			<!-- Search Bar -->
+			<div class="input-group">
+			 	<input type="text" class="form-control" placeholder="Channel Name (e.g. FreeCodeCamp)" id="twitch-search">
+			  	<span class="input-group-btn">
+					<button class="btn btn-success" type="button" id="twitch-add">+</button>
+				</span>
+			</div>
+			<hr>
+
+			<!-- Search Button -->
+			<div class="btn-group btn-group-lg" role="group">
+				<button type="button" class="btn btn-primary" id="twitch-all">All</button>
+				<button type="button" class="btn btn-outline-success" id="twitch-on">Online</button>
+				<button type="button" class="btn btn-outline-danger" id="twitch-off">Offline</button>
+			</div>
+			<hr>
+
+			<!-- Channel Status -->
+			<table class="table table-bordered">
+				<thead class="thead-inverse">
+					<tr>
+						<th scope="col">Icon</th>
+						<th scope="col">Channel</th>
+						<th scope="col">Description</th>
+					</tr>
+				</thead>
+
+				<tbody id="twitch-channel">
+				</tbody>
+			</table>
+		</div>
+		
+	</article>
+</body>
+
+</html>

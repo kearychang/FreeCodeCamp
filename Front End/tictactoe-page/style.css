@@ -1,0 +1,72 @@
+body {
+	background-color: #DFDBE5;
+	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.tictactoe {
+	margin: auto;
+	margin-top: 2.5%;
+	width: 80%;
+	min-height: 90%;
+}
+
+.tictactoe-game {
+	margin: auto;
+	width: 50%;
+}
+
+.tictactoe-box {
+	height: 100px;
+	border: 3px solid darkgrey;
+	background-color: lightgrey;
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 4em;
+	cursor: pointer;
+}
+
+.tictactoe-font {
+	font-family: 'Fredericka the Great', cursive;
+}
+
+.tictactoe-btn {
+	border: 1px solid #EEEEEE;
+	cursor: pointer;
+}
+
+.tictactoe-btn-selected {
+	border: 1px solid darkgrey;
+	border-radius: 10px;
+	color: darkblue;
+}
+
+.tictactoe-btn:hover {
+	border: 1px solid darkgrey;
+	border-radius: 10px;
+	color: darkblue;
+}
+
+.hidden {
+	display: none;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.left-align {
+	text-align: left;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

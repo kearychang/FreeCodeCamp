@@ -1,0 +1,54 @@
+html {
+	background-color: #092B40;
+}
+
+.panel {
+	border-left: 5px solid transparent !important;
+}
+
+.panel:hover {
+	border-left: 5px solid #00FFE4 !important;
+	cursor: pointer;
+}
+
+.wiki {
+	min-height: 100%;
+	background-color: #092B40;
+	margin-top: 20%;
+}
+
+.wiki-font {
+	color: #FFFFFF;
+}
+
+.wiki-panel {
+	width: 80%;
+	margin-top: 25px;
+	margin-left: 10%;
+}
+
+.wiki-search {
+	width: 2%;
+	margin: auto;
+}
+
+.wiki-search2 {
+	width: 2%;
+	margin: auto;
+}
+
+#wiki-search-button {
+	color: #FFC029;
+	font-size: 30px;
+	text-align: center; 
+	display: block;
+	cursor: pointer;
+}
+
+#wiki-close-button {
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}

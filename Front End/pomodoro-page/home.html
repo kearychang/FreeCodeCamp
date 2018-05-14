@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro</title>
+
+	<!-- HEADER STYLESHEET -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Barrio|Open+Sans+Condensed:300" rel="stylesheet">
+
+	<!-- HEADER SCRIPT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div class="container noselect">
+		<!-- Title -->
+		<div class="row">
+			<h1 class="pomodoro-title col-12">
+				The Pomodoro Clock
+			</h1>
+		</div>
+
+		<!-- Clock -->
+		<div class="row">
+			<!-- Button -->
+			<div class="col-md-6">
+				<!-- Session Button -->
+				<div>
+					<span class="pomodoro-font2 pomodoro-active" id="sess_title">session</span>
+					<span class="pomodoro-font pomodoro-btn" id="sess_down"><</span>
+					<span class="pomodoro-font2 pomodoro-active" id="sess_text">25</span>
+					<span class="pomodoro-font pomodoro-btn" id="sess_up">></span>
+				</div>
+
+				<!-- Break Button -->
+				<div>
+					<span class="pomodoro-font2" id="break_title">break</span>
+					<span class="pomodoro-font pomodoro-btn" id="break_down"><</span>
+					<span class="pomodoro-font2" id="break_text">5</span>
+					<span class="pomodoro-font pomodoro-btn" id="break_up">></span>
+				</div>
+
+				<!-- Reset Button -->
+				<div class="pomodoro-font">
+					<span class="pomodoro-btn" id="reset">reset</span>
+				</div>
+			</div>
+
+			<!-- Picture -->
+			<div class="col-md-6">
+				<div class="pomodoro-img">
+					<div class="pomodoro-font" id="pomodoro-time">
+						25:00
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
