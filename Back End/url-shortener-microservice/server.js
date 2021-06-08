@@ -1,50 +1,113 @@
-// server.js
-// where your node app starts
+require('dotenv').config();
 
-// init project
-//I can get the IP address, language and operating system for my browser.
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
-var http = require("http");
-var url = require("url");
-var shortindex_obj = {};
-var i = 0;
-
-var response = function(res, json, redirect, redirectUrl) {
-  if (redirect) {
-    res.writeHead(301, {"location" : redirectUrl});
-  } else {
-    res.writeHead(200, {"Content-Type": "application/json"});
-    res.write(JSON.stringify(json));
+//DB
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+.catch(error => console.log(error));;
+mongoose.connection.on('error', err => {
+  console.log(err);
+});
+const cacheUrlSchema = new Schema({
+  cacheNumber: {
+    type : Number,
+    required : true
+  },
+  url: {
+    type : String,
+    required : true
   }
-  res.end();
+});
+var modelCacheUrl = mongoose.model("cacheUrl", cacheUrlSchema);
+const counterSchema = new Schema({
+  count: Number
+});
+var modelCounter = mongoose.model("counter", counterSchema);
+const getCount = async function() {
+  modelCounter.findOne({count: {$gte: 0}}, (err, data) => {
+    if (err) console.log(err);
+    if (data) {
+      console.log(data.count);
+      return data.count;
+    } else {
+      modelCounter.create([{count: 0}], (err, data) => {
+        if (err) console.log(err);
+        console.log("created counter document in mongodb");
+      });
+    }
+  });
 }
 
-
-var server = http.createServer(function(req, res) {
-  var json = {"original_url": null, "short_url": null};
-  var q = url.parse(req.url,true).pathname;
-  var redirectFlag = false;
-  var redirectUrl = "";
-  if (q.substring(0,4) == "/new") {
-    json["original_url"] = req.headers.host + q;
-    json["short_url"] = req.headers.host + "/" + i;
-    var getUrl = q.split("/")[2];
-    if (getUrl.length < 8 || getUrl.substring(0,8) != "https://") {
-      shortindex_obj[i] = "https://" + getUrl;
-    } else {
-      shortindex_obj[i] = q.split("/")[2];
-    }
-    i += 1;
-  } else {
-     if (shortindex_obj[parseInt(q.substring(1,q.length))] != undefined) {
-       redirectFlag = true;
-       redirectUrl = shortindex_obj[parseInt(q.substring(1,q.length))];
-     } else {
-       json = {};
-       json["error"] = "not in database";
-     }
-  }
-  response(res, json, redirectFlag, redirectUrl);
+// Basic Configuration
+const port = process.env.PORT || 3000;
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded());
+app.use('/public', express.static(`${process.cwd()}/public`));
+app.listen(port, function() {
+  console.log(`Listening on port ${port}`);
 });
 
-server.listen(process.env.PORT);
+// GET for HOME PAGE
+app.get('/', function(req, res) {
+  res.sendFile(process.cwd() + '/views/index.html');
+});
+
+// GET
+app.get('/api/shorturl', function(req, res) {
+  res.json({ error: "Invalid URL"});
+});
+
+// GET for REDIRECT to short URL
+app.get('/api/shorturl/:number([0-9]+)', function(req, res) {
+  let cacheNumber = req.params.number;
+  modelCacheUrl.findOne({ cacheNumber: cacheNumber}, (err,cacheData) => {
+    if (err) console.log(err);
+    if (cacheData) {
+      // Cache number exists, redirect there
+      res.redirect(cacheData.url);
+    } else {
+      // Cache number DNE, 404
+      res.status(404).send();
+    }
+  });
+});
+
+// POST
+app.post('/api/shorturl', function(req, res) {
+  //validate if URL is valid
+  let url = req.body.url;
+  try {
+    let URL = new URL(url);
+  } catch(e) {
+    res.json({ error: "Invalid URL"}).send();
+  }
+  
+  // Check for Mongo document with URL shortner
+  modelCacheUrl.findOne({ url: url }, (err, urlData) => {
+    if (err) console.log(err);
+    if (urlData) {
+      // Mongo document already exists, redirect and show JSON of cache number
+      console.log("url already exists at /api/shorturl/" + urlData.cacheNumber);
+      res.redirect('/api/shorturl/' + urlData.cacheNumber);
+    } else {
+      // Mongo document DNE, create document, then show JSON of cache number
+      let currCount = await getCount();
+      modelCounter.findOneAndUpdate({count: {$gte: 0}}, {count: currCount + 1}, (err, countData) => {
+        if (err) console.log(err);
+        if (countData) {
+          await modelCacheUrl.create({ cacheNumber: currCount + 1, url: url });
+          console.log("cached " + url + " at /api/shorturl/" + (currCount + 1))
+          // res.redirect('/api/shorturl/' + (urlData.currCount + 1));
+          res.json({"original_url": url, "short_url": currCount + 1});
+        } else {
+          throw new Error("counter document not found");
+        }
+      });
+    }
+  });
+});
