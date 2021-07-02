@@ -48,7 +48,7 @@ app.get('/', function(req, res) {
 
 // GET
 app.get('/api/shorturl', function(req, res) {
-  res.json({ error: "Invalid URL"});
+  res.json({ error: "invalid url"});
 });
 
 // GET for REDIRECT to short URL
@@ -75,7 +75,7 @@ app.post('/api/shorturl', function(req, res) {
   try {
     let reqURL = new URL(urlStr);
   } catch(e) {
-    res.json({ error: "Invalid URL"}).send();
+    res.json({ error: "invalid url"});
     return;
   }
   
@@ -96,7 +96,7 @@ app.post('/api/shorturl', function(req, res) {
             if (err) {
               console.log(err);
             } else {
-              res.json({"original_url": urlStr, "short_url": count}).send();
+              res.json({"original_url": urlStr, "short_url": count});
               console.log("cached " + urlStr + " at /api/shorturl/" + count)
             }
           });
