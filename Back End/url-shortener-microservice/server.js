@@ -72,12 +72,8 @@ app.get('/api/shorturl/:number([0-9]+)', function(req, res) {
 app.post('/api/shorturl', function(req, res) {
   //validate if URL is valid
   let urlStr = req.body.url;
-  try {
-    let reqURL = new URL(urlStr);
-  } catch(e) {
-    res.json({ error: "invalid url"});
-    return;
-  }
+  const httpRegex = /^(http|https)(:\/\/)/;
+  if (!httpRegex.test(urlStr)) {return res.json({ error: 'invalid url' })};
   
   // Check for Mongo document with URL shortner
   modelCacheUrl.findOne({ url: urlStr }, (err, urlData) => {
