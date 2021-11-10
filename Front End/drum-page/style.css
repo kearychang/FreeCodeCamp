@@ -1,17 +1,29 @@
-#drum-machine {
-    margin-top: 25%;
-    margin-bottom: 25%;
+html {
     background-color: aqua;
 }
 
-.button-box {
+#drum-machine {
+    margin-top: 12.5%;
+    margin-bottom: 25%;
+}
+
+.button-body {
     margin-left: 25%;
     margin-right: 25%;
-    display: block;
 }
 
 .drum-pad {
-    border: 2px solid grey;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid blue;
     border-radius: 25%;
-    padding: 5px;
+    padding: 25px;
+    font-size: larger;
+    color: white;
+    background-color: cornflowerblue;
+    display: inline-block;
+}
+
+.drum-pad:hover {
+    background-color: lightskyblue;
 }

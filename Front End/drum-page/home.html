@@ -11,49 +11,52 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+
+        <!-- HEADER SCRIPT -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="main.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="drum-machine">
-            <div class="button-box">
+            <div class="button-body">
                 <div class="button-row">
-                    <div class="drum-pad" id="Q">Q
-                        <audio src=""></audio>
+                    <div class="drum-pad">Q
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" class="clip" id="q"></audio>
                     </div>
-                    <div class="drum-pad" id="W">W
-
+                    <div class="drum-pad">W
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" class="clip" id="w"></audio>
                     </div>
-                    <div class="drum-pad" id="E">E<
-                        /div>
-                </div>
-                <div class="button-row">
-                    <div class="drum-pad" id="A">A
-
-                    </div>
-                    <div class="drum-pad" id="S">S
-
-                    </div>
-                    <div class="drum-pad" id="D">D
-
+                    <div class="drum-pad">E
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" class="clip" id="e"></audio>
                     </div>
                 </div>
                 <div class="button-row">
-                    <div class="drum-pad" id="Z">Z
-
+                    <div class="drum-pad">A
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" class="clip" id="a"></audio>
                     </div>
-                    <div class="drum-pad" id="X">X
-
+                    <div class="drum-pad">S
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" class="clip" id="s"></audio>
                     </div>
-                    <div class="drum-pad" id="C">C
-                        
+                    <div class="drum-pad">D
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" class="clip" id="d"></audio>
                     </div>
                 </div>
+                <div class="button-row">
+                    <div class="drum-pad">Z
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" class="clip" id="z"></audio>
+                    </div>
+                    <div class="drum-pad">X
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" class="clip" id="x"></audio>
+                    </div>
+                    <div class="drum-pad">C
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" class="clip" id="c"></audio>
+                    </div>
+                </div>
+                <div id="display"></div>
             </div>
-
         </div>
-
-        <script src="" async defer></script>
     </body>
 </html>
